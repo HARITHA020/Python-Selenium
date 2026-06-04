@@ -2,7 +2,7 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support import expected_conditions 
 
 driver = webdriver.Chrome()
 driver.maximize_window()
@@ -22,15 +22,13 @@ username.is_displayed()
 print("the loogged user name:",username.text)
 delete=driver.find_element(By.XPATH,"//a[normalize-space()='Delete Account']")
 delete.click()
-
-
-deletemsg = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, "//b[normalize-space()='Account Deleted!']")))
+wait=WebDriverWait(driver, 10)
+deletemsg = wait.until(expected_conditions .visibility_of_element_located((By.XPATH, "//b[normalize-space()='Account Deleted!']")))
 print(deletemsg.text)
 if deletemsg.text=="ACCOUNT DELETED!":
     print("account deleted successfully")
 else:
     print("account is not deleted")
-    
 driver.close()
 
 
