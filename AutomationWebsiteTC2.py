@@ -1,6 +1,9 @@
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
 driver = webdriver.Chrome()
 driver.maximize_window()
 driver.get("https://automationexercise.com/")
@@ -19,8 +22,7 @@ username.is_displayed()
 print("the loogged user name:",username.text)
 delete=driver.find_element(By.XPATH,"//a[normalize-space()='Delete Account']")
 delete.click()
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+
 
 deletemsg = WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH, "//b[normalize-space()='Account Deleted!']")))
 print(deletemsg.text)
