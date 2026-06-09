@@ -5,7 +5,7 @@ def get_config(category, key):
     config = ConfigParser()
 
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    file_path = os.path.join(base_dir, "..", "config.ini")
+    file_path = os.path.join(base_dir, "config.ini")
 
     print("LOADING:", file_path)
 
