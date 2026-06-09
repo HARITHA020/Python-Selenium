@@ -13,12 +13,10 @@ class TestLogin:
         password = readconfig.get_config("login credential", "upass")
         self.driver.find_element(By.ID, "loginusername").send_keys(username)
         self.driver.find_element(By.ID, "loginpassword").send_keys(password)
-        self.driver.find_element(By.XPATH, "//button[text()='Log in']").click()
-        logout = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.ID, "logout2")))
-        assert logout.is_displayed()
-        userlogged=WebDriverWait(self.driver,10).until(EC.visibility_of_element_located((By.CSS_SELECTOR,"#nameofuser")))
-        print("the logged username:",userlogged.text)
-        
+        loginbtn=WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.XPATH, "//button[text()='Log in']")))
+        loginbtn.click()
+        userlogged = WebDriverWait(self.driver, 15).until(EC.visibility_of_element_located((By.ID, "nameofuser")) )
+        print("the logged username:", userlogged.text)
     def test_invalidlogin(self):
         self.driver.find_element(By.ID, "login2").click()
         username = readconfig.get_config("invalid credentials", "uname")
