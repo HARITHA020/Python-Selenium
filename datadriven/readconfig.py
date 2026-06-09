@@ -1,7 +1,7 @@
-import configparser
-import os
-config = configparser.ConfigParser()
-config_path = os.path.join(os.path.dirname(__file__), "config.ini")
-config.read(config_path)
-def get_config(section, key):
-    return config.get(section, key)
+from configparser import ConfigParser
+
+def get_config(category,key):
+    config=ConfigParser()
+    config.read("./config.ini")
+    return config.get(category,key)
+
