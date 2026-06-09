@@ -7,11 +7,11 @@ def get_config(category, key):
     base_dir = os.path.dirname(os.path.abspath(__file__))
     file_path = os.path.join(base_dir, "..", "config.ini")
 
-    print("LOADING CONFIG FROM:", file_path)
+    print("LOADING:", file_path)
 
-    read_files = config.read(file_path, encoding="utf-8")
+    with open(file_path, "r", encoding="utf-8-sig") as f:
+        config.read_file(f)
 
-    print("CONFIG READ RESULT:", read_files)
-    print("AVAILABLE SECTIONS:", config.sections())
+    print("SECTIONS:", config.sections())
 
     return config.get(category, key)
