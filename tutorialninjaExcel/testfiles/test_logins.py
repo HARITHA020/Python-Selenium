@@ -6,16 +6,16 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 
 from utilities import excelReader
-from utilities import logCreator
+from utilities import logcreator
 
 
 @pytest.mark.parametrize(
     "email,password",
-    excelReader.get_data("ExcelFiles/loginData.xlsx", "login")
+    excelReader.get_data("excelFile/logindata.xlsx", "login")
 )
 class TestTutorialsNinjaLogin:
 
-    log = logCreator.log_generator()
+    log = logcreator.log_generator()
 
     def test_login(self, email, password):
 
