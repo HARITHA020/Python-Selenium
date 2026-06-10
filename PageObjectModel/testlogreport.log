@@ -1,0 +1,19 @@
+2026-06-10 14:18:20 - INFO - *** Login Test Started ****
+2026-06-10 14:18:20 - INFO - Entering Username : haritharavichandran11@gmail.com
+2026-06-10 14:18:23 - INFO - Clicked Login Button
+2026-06-10 14:18:23 - INFO - Login Successful
+2026-06-10 14:18:23 - INFO - **** Login Test Passed *****
+2026-06-10 14:18:23 - INFO - *** Home Test Started ****
+2026-06-10 14:18:23 - INFO - Searching Product : HP
+2026-06-10 14:18:24 - INFO - Search Button Clicked
+2026-06-10 14:18:24 - INFO - *** Home Test Passed *****
+2026-06-10 14:18:24 - INFO - ** Search Test Started ***
+2026-06-10 14:18:24 - INFO - Product Displayed Successfully
+2026-06-10 14:18:24 - INFO - ** Search Test Passed ****
+2026-06-10 14:18:24 - INFO - *** Product Test Started ***
+2026-06-10 14:18:24 - INFO - Opening Product Page
+2026-06-10 14:18:25 - INFO - Clicking Add To Cart
+2026-06-10 14:18:26 - INFO - Success Message : Success: You have added HP LP3065 to your shopping cart!
+×
+2026-06-10 14:18:26 - INFO - Product Added To Cart Successfully
+2026-06-10 14:18:26 - INFO - *** Product Test Passed ****
