@@ -7,3 +7,4 @@ openpyxl
 allure-pytest
 pytest-order
 pytest-dependency
+selenium-page-factory
