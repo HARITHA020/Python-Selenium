@@ -5,3 +5,5 @@ pytest-html
 pytest-check
 openpyxl
 allure-pytest
+pytest-order
+pytest-dependency
